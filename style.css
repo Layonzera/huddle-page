@@ -1,0 +1,133 @@
+/* Deafult configs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: hsl(257, 40%, 49%);
+  --bg-hover: hsl(300, 69%, 71%);
+
+  --ff-body: 'Open Sans', sans-serif;
+  --ff-headings: 'Poppins', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 1.6rem;
+  background-image: url(/img/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-color: var(--bg-color);
+  font-family: var(--ff-body);
+  font-weight: 400;
+}
+
+/* Mobile First */
+main {
+  max-width: 37.5rem;
+  margin: 3rem auto;
+  display: grid;
+  align-items: center;
+}
+
+.left-side #logo {
+  width: 20rem;
+  margin-bottom: 7rem;
+  cursor: pointer;
+}
+
+.left-side #logo + #main-img {
+  margin-bottom: 7rem;
+}
+
+.right-side {
+  text-align: center;
+}
+
+.right-side h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.right-side p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.right-side a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #674baf;
+  border-radius: 2.5rem;
+  background: #fff;
+  padding: 1rem 10rem;
+  transition: all 350ms;
+}
+
+.right-side a:hover {
+  background: var(--bg-hover);
+  color: #fff;
+}
+
+footer {
+  margin: 10rem auto 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.social-media i {
+  font-size: 3rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1.3rem;
+  transition: all 350ms;
+  color: #fff;
+}
+
+.social-media i:hover {
+  background: var(--bg-hover);
+  border: none;
+}
+
+/* DESKTOP */
+@media (min-width: 920px) {
+  body {
+    background-image: url(/img/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    max-width: 1200px;
+    padding: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  main .left-side {
+    width: 50rem;
+  }
+
+  main .right-side {
+    width: 30rem;
+  }
+
+  footer {
+    margin: 0 auto 3rem;
+  }
+}
